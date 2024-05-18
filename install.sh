@@ -1,17 +1,25 @@
 #!/bin/bash
 
-# ANSI color codes
 GREEN='\033[0;32m'
-NC='\033[0m' # No Color
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+NC='\033[0m'
 
 echo -e "${GREEN} ░▀░ █▀▀█ █▀▀█ █▀▀█ █░█ █░░█"
 echo -e "${GREEN} ▀█▀ █░░█ █▄▄▀ █░░█ ▄▀▄ █▄▄█"
 echo -e "${GREEN} ▀▀▀ █▀▀▀ ▀░▀▀ ▀▀▀▀ ▀░▀ ▄▄▄█${NC}"
+echo -e "${YELLOW}https://github.com/parsico${NC}"
+echo -e "${RED}Powered By PARSICO.ORG${NC}"
+echo -e ""
+echo -e ""
+echo -e "${GREEN}-----------------------------------------${NC}"
+echo -e ""
 echo -e "${GREEN}Welcome to the Parsico iProxy!${NC} Please select an option:"
 echo -e "${GREEN}1. Install iProxy"
 echo -e "2. View Fake-TLS Site List"
 echo -e "3. Create Proxy with Legacy Kernel${NC}"
-echo -e "${GREEN}https://github.com/parsico${NC}"
+echo -e ""
+echo -e "${GREEN}-----------------------------------------${NC}"
 
 read -p "Enter your choice (1 / 2 / 3): " choice
 
