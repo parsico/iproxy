@@ -11,7 +11,6 @@ echo -e "${GREEN} ▀▀▀ █▀▀▀ ▀░▀▀ ▀▀▀▀ ▀░▀ ▄
 echo -e "${YELLOW}https://github.com/parsico${NC}"
 echo -e "${RED}Powered By PARSICO.ORG${NC}"
 echo -e ""
-echo -e ""
 echo -e "${GREEN}-----------------------------------------${NC}"
 echo -e ""
 echo -e "${GREEN}Welcome to the Parsico iProxy!${NC} Please select an option:"
