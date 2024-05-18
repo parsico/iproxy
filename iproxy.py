@@ -2,13 +2,13 @@ import subprocess
 
 def run_commands():
     commands = [
-        "sudo apt update",
-        "sudo apt upgrade -y",
-        "sudo apt-get install chrony -y",
-        "sudo systemctl start chrony",
-        "sudo systemctl enable chrony",
-        "curl -L -o mtp_install.sh https://git.io/fj5ru",
-        "bash mtp_install.sh"
+"sudo apt update && 
+sudo apt upgrade -y && 
+sudo apt-get install chrony -y && 
+sudo systemctl start chrony && 
+sudo systemctl enable chrony && 
+curl -L -o mtp_install.sh https://git.io/fj5ru && 
+bash mtp_install.sh"
     ]
     
     for command in commands:
