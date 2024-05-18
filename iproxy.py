@@ -42,14 +42,6 @@ def run_commands():
             print(e)
             break
     
-    decision = input("Do you want to check server details and speed? (y/n): ")
-    if decision.lower() == 'y':
-        try:
-            subprocess.run("wget -qO- bench.sh | bash", check=True, shell=True)
-        except subprocess.CalledProcessError as e:
-            print("Error occurred while running server details command.")
-            print(e)
-            
     decision = input("Do you want to install the fake website and BBR? (y/n): ")
     if decision.lower() == 'y':
         try:
@@ -63,6 +55,14 @@ def run_commands():
             subprocess.run("systemctl restart nginx", check=True, shell=True)
         except subprocess.CalledProcessError as e:
             print("Error occurred while running installation commands.")
+            print(e)
+    
+    decision = input("Do you want to check server details and speed? (y/n): ")
+    if decision.lower() == 'y':
+        try:
+            subprocess.run("wget -qO- bench.sh | bash", check=True, shell=True)
+        except subprocess.CalledProcessError as e:
+            print("Error occurred while running server details command.")
             print(e)
 
     init(autoreset=True)
