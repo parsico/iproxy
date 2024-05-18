@@ -1,16 +1,19 @@
 import subprocess
 import base64
 
+def install_package(package):
+    subprocess.run(f"python3 -m pip install {package}", check=True, shell=True)
+
 try:
     from tqdm import tqdm
 except ImportError:
-    subprocess.run("pip3 install tqdm", check=True, shell=True)
+    install_package("tqdm")
     from tqdm import tqdm
 
 try:
     from colorama import init, Fore, Style
 except ImportError:
-    subprocess.run("pip3 install colorama", check=True, shell=True)
+    install_package("colorama")
     from colorama import init, Fore, Style
 
 def run_commands():
