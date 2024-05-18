@@ -7,7 +7,7 @@ NC='\033[0m' # No Color
 echo -e "${GREEN} ░▀░ █▀▀█ █▀▀█ █▀▀█ █░█ █░░█"
 echo -e "${GREEN} ▀█▀ █░░█ █▄▄▀ █░░█ ▄▀▄ █▄▄█"
 echo -e "${GREEN} ▀▀▀ █▀▀▀ ▀░▀▀ ▀▀▀▀ ▀░▀ ▄▄▄█${NC}"
-echo -e "${GREEN}Welcome to the Parsico iProxy!${NC} Please enter '1' or '2' to proceed."
+echo -e "${GREEN}Welcome to the Parsico iProxy!${NC} Please Install iProxy Enter: '1' or Fake-TLS Site list Enter:'2' to proceed."
 echo -e "${GREEN}https://github.com/parsico${NC}"
 
 read -p "Enter your choice: " choice
