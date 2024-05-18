@@ -10,7 +10,7 @@ echo -e "${GREEN} ▀▀▀ █▀▀▀ ▀░▀▀ ▀▀▀▀ ▀░▀ ▄
 echo -e "${GREEN}Welcome to the Parsico iProxy!${NC} Please Install iProxy Enter: '1' or Fake-TLS Site list Enter:'2' to proceed."
 echo -e "${GREEN}https://github.com/parsico${NC}"
 
-read -p "Enter your choice: " choice
+read -p "Enter your choice 1 / 2: " choice
 
 if [ "$choice" = "1" ]; then
     apt update && apt upgrade -y
