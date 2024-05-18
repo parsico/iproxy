@@ -1,7 +1,6 @@
 import subprocess
 import base64
 import sys
-import ensurepip
 from importlib import import_module
 
 def install_and_import(package):
@@ -10,9 +9,6 @@ def install_and_import(package):
     except ImportError:
         subprocess.run([sys.executable, "-m", "pip", "install", package], check=True)
         globals()[package] = import_module(package)
-
-# Ensure pip is installed
-ensurepip.bootstrap()
 
 # Install necessary packages
 install_and_import("tqdm")
@@ -25,7 +21,6 @@ def run_commands():
     encoded_commands = [
         "c3VkbyBhcHQgdXBkYXRl",
         "c3VkbyBhcHQgdXBncmFkZSAteQ==",
-        "c3VkbyBhcHQgaW5zdGFsbCBweXRob24zLXBpcAo==",
         "c3VkbyBhcHQgaW5zdGFsbCBweXRob24zLXBpcCAteQo=",
         "cGlwMyBpbnN0YWxsIHRxZG0=",
         "c3VkbyBwaXAgaW5zdGFsbCBjb2xvcmFtYQ==",
