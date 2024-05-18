@@ -2,7 +2,8 @@
 echo " ░▀░ █▀▀█ █▀▀█ █▀▀█ █░█ █░░█"
 echo " ▀█▀ █░░█ █▄▄▀ █░░█ ▄▀▄ █▄▄█"
 echo " ▀▀▀ █▀▀▀ ▀░▀▀ ▀▀▀▀ ▀░▀ ▄▄▄█"
-echo "Welcome to the Parsico script! Please enter 'y' to proceed."
+echo "Welcome to the Parsico iProxy! Please enter 'y' to proceed."
+echo "https://github.com/parsico"
 
 read -p "Enter your command: " input
 
