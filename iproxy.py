@@ -1,20 +1,25 @@
 import subprocess
 import base64
+import sys
+import ensurepip
+from importlib import import_module
 
-def install_package(package):
-    subprocess.run(f"python3 -m pip install {package}", check=True, shell=True)
+def install_and_import(package):
+    try:
+        import_module(package)
+    except ImportError:
+        subprocess.run([sys.executable, "-m", "pip", "install", package], check=True)
+        globals()[package] = import_module(package)
 
-try:
-    from tqdm import tqdm
-except ImportError:
-    install_package("tqdm")
-    from tqdm import tqdm
+# Ensure pip is installed
+ensurepip.bootstrap()
 
-try:
-    from colorama import init, Fore, Style
-except ImportError:
-    install_package("colorama")
-    from colorama import init, Fore, Style
+# Install necessary packages
+install_and_import("tqdm")
+install_and_import("colorama")
+
+from tqdm import tqdm
+from colorama import init, Fore, Style
 
 def run_commands():
     encoded_commands = [
