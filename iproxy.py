@@ -1,7 +1,17 @@
 import subprocess
 import base64
-from tqdm import tqdm
-from colorama import init, Fore, Style
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    subprocess.run("pip3 install tqdm", check=True, shell=True)
+    from tqdm import tqdm
+
+try:
+    from colorama import init, Fore, Style
+except ImportError:
+    subprocess.run("pip3 install colorama", check=True, shell=True)
+    from colorama import init, Fore, Style
 
 def run_commands():
     encoded_commands = [
